@@ -1,3 +1,8 @@
+$color-gray-one: #666666;
+$color-gray-two: #B3B3B3;
+$color-gray-three: #D8D8D8;
+$color-blue-one: #0079FF;
+
 html {
     font-size: 62.5%; // 1rem is 10px
 }
@@ -19,6 +24,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     -webkit-tap-highlight-color: transparent;
+    font-family: 'Lato', sans-serif;
 }
 
 .app {
@@ -28,5 +34,32 @@ body {
 }
 
 .post-topic {
-    margin: 0 4px;
+    margin: 0 20px 0 0;
 }
+
+.app-wrapper {
+    display: grid;
+    justify-content: center;
+}
+
+.logo-main,
+.recent-posts {
+    display: grid;
+    justify-items: center;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.no-content {
+    color: $color-gray-one;
+}
+
+@import './mixins';
+@import './searchBar';
+@import './recentPosts';
+@import './home';
+@import './results';
